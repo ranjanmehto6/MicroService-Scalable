@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -27,4 +28,9 @@ public class User {
 
     @Column(name = "ABOUT")
     private String about;
+
+
+    @Transient
+    private List<Rating> ratings;
+
 }
